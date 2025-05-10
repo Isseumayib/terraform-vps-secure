@@ -22,9 +22,15 @@ Ce projet contient une infrastructure codée en Terraform permettant de déploye
 
 ```bash
 .
-├── main.tf              # Fichier principal Terraform
-├── variables.tf         # Déclaration des variables
-├── outputs.tf           # Sorties du déploiement
-├── provider.tf          # Configuration AWS provider
-└── README.md            # Ce fichier
+terraform-vps-secure/
+├── main.tf
+├── variables.tf
+├── outputs.tf
+├── vpc.tf
+├── security.tf
+├── ec2.tf
+├── cloudtrail.tf
+├── cloudwatch.tf
+├── guardduty_config.tf
+├── terraform.tfvars
 
