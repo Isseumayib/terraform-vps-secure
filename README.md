@@ -32,5 +32,5 @@ terraform-vps-secure/
 ├── cloudtrail.tf
 ├── cloudwatch.tf
 ├── guardduty_config.tf
-├── terraform.tfvars
+├── ce fichier
 
