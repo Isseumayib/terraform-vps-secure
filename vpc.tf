@@ -16,11 +16,11 @@ resource "aws_subnet" "private" {
 }
 
 resource "aws_internet_gateway" "igw" {
-  vpc_id = aws_vpc.main.id
+  vpc_id = "vpc-0e13b1d2bdb6e03ad"  # ton VPC
 }
 
-resource "aws_route_table" "public" {
-  vpc_id = aws_vpc.main.id
+resource "aws_route_table" "public_rt" {
+  vpc_id = "vpc-0e13b1d2bdb6e03ad"
 
   route {
     cidr_block = "0.0.0.0/0"
@@ -29,6 +29,8 @@ resource "aws_route_table" "public" {
 }
 
 resource "aws_route_table_association" "public_assoc" {
-  subnet_id      = aws_subnet.public.id
-  route_table_id = aws_route_table.public.id
+  subnet_id      = "subnet-08c0c31b5e7d337df"
+  route_table_id = aws_route_table.public_rt.id
 }
+
+
